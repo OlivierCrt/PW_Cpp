@@ -1,24 +1,26 @@
+#ifndef TABLEAU_H
+#define TABLEAU_H
+
 #include <iostream>
-#include<string>
+#include <string>
 #include "Entree.h"
-using namespace std;
 
+class Tableau {
+private:
+    int taille;
+    Entree* tableau;
+    int nb_element;
 
-class Tableau{
-    private :
-        int taille ;
-        Entree* tableau ;
-        int nb_element;
-    public:
-        Tableau();
-        Tableau(int taille_p,int nb_p);
-        void printTab();
-        bool ajouter(string nom, string numero);
-        bool supprimer(string nom,string numero);
-        bool supprimer(string nom);
-
-        ~Tableau();
-        int getNb();
-        int getTaille();
-
+public:
+    Tableau();
+    Tableau(int taille_p);
+    ~Tableau();
+    void printTab();
+    bool ajouter(std::string nom, std::string numero);
+    bool supprimer(std::string nom, std::string numero);
+    bool supprimer(std::string nom);
+    int getNb();
+    int getTaille();
 };
+
+#endif 
