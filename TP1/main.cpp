@@ -48,13 +48,21 @@ int main() {
     cout << "\nÉtat final de l'agenda:" << endl;
     agenda.printAgenda();
 
-    return 0;  
+    // Test de l'opérateur +
+    cout << "\nTest de l'opérateur + (concaténation d'agendas):" << endl;
+
+    Agenda autre_agenda(3);
+    autre_agenda.ajouter("Frank", "444444444");
+    autre_agenda.ajouter("Grace", "555555555");
+    autre_agenda.ajouter("Henry", "666666666");
+
+    cout << "\nÉtat de l'autre agenda avant concaténation:" << endl;
+    autre_agenda.printAgenda();
+
+    Agenda agenda_concatene = agenda + autre_agenda;
+
+    cout << "\nÉtat de l'agenda après concaténation avec l'autre agenda:" << endl;
+    agenda_concatene.printAgenda();
+
+    return 0;
 }
-
-
-/*Question 5
--1 Modifier attribut de agenda et mettre un Tableau*(pointeur)
--2 Maj des constructeur avec des new
--3 Ajout destructeur dans Agenda
--4 Maj du main()
-*/

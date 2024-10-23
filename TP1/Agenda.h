@@ -4,7 +4,7 @@
 
 class Agenda{
     private :
-        Tableau tableau;
+        Tableau tab_ag;
     public:
         Agenda();
         Agenda(Tableau tableau_p);

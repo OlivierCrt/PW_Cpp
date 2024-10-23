@@ -21,8 +21,9 @@ public:
     bool supprimer(std::string nom);
     int getNb()const;
     int getTaille()const;
+    void setNb(int nb);
+    Entree* getEntrees()const;
 
-    Agenda operator+(const Agenda& autre) const;
 };
 
 #endif 

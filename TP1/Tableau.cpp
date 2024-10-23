@@ -82,3 +82,10 @@ int Tableau::getNb() const{
 int Tableau::getTaille()const {
     return this->taille;
 }
+void Tableau::setNb(int nbp){
+    this->nb_element = nbp;
+}
+Entree* Tableau::getEntrees()const{
+    return this->tableau;
+
+}
