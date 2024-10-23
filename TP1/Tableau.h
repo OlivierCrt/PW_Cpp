@@ -19,8 +19,10 @@ public:
     bool ajouter(std::string nom, std::string numero);
     bool supprimer(std::string nom, std::string numero);
     bool supprimer(std::string nom);
-    int getNb();
-    int getTaille();
+    int getNb()const;
+    int getTaille()const;
+
+    Agenda operator+(const Agenda& autre) const;
 };
 
 #endif 

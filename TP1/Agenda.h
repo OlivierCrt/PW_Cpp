@@ -14,4 +14,6 @@ class Agenda{
         bool supprimer(string nom);
         void printAgenda();
 
+        Agenda operator+(const Agenda& autre);
+
 };

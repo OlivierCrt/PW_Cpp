@@ -75,10 +75,10 @@ bool Tableau::supprimer(string nom_p) {
     return false;
 }
 
-int Tableau::getNb() {
+int Tableau::getNb() const{
     return this->nb_element;
 }
 
-int Tableau::getTaille() {
+int Tableau::getTaille()const {
     return this->taille;
 }
