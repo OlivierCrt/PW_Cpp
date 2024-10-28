@@ -14,6 +14,12 @@ class Agenda{
         bool supprimer(string nom);
         void printAgenda();
 
+
         Agenda operator+(const Agenda& autre);
+        Agenda& operator+=(const Agenda& autre);
+        bool operator==(const Agenda& autre);
+        friend ostream& operator<<(ostream& os, const Agenda& agenda);
+        bool operator/(const string& nom);
+
 
 };

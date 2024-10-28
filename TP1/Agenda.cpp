@@ -53,3 +53,83 @@ Agenda Agenda::operator+(const Agenda& autre_agenda){
     return res;
 }
 
+
+Agenda& Agenda::operator+=(const Agenda& autre){
+    int taille_this= this->tab_ag.getTaille();
+    int nbe_this= this->tab_ag.getNb();
+    int nbe_autre= autre.tab_ag.getNb();
+
+    if (taille_this <(nbe_autre+nbe_this)){
+        cerr<<"Erreur l'agenda cible n'as pas la taille nécessaire, l'action n est pas effectuée.\n Taille: "<<taille_this<<"\nNbe total: "<<(nbe_autre+nbe_this);
+        return *this;
+    }
+    for (int index=0;index<nbe_autre;index++){
+        string name_entree_i=autre.tab_ag.getEntrees()[index].getNom();
+        string num_entree_i= autre.tab_ag.getEntrees()[index].getNum();
+        this->tab_ag.ajouter(name_entree_i,num_entree_i);
+
+    }
+    return *this;
+
+
+
+
+
+
+    
+
+
+}
+
+
+bool Agenda::operator==(const Agenda& autre){
+
+    if ( this->tab_ag.getNb() != autre.tab_ag.getNb()){
+        return false;
+    }
+    else if (this->tab_ag.getTaille() != autre.tab_ag.getTaille()){
+        return false;
+    }
+    for (int i=0;i<this->tab_ag.getNb();i++) {
+
+        string name_this= this->tab_ag.getEntrees()[i].getNom();
+        string num_this= this->tab_ag.getEntrees()[i].getNum();
+
+        string name_autre=autre.tab_ag.getEntrees()[i].getNom();
+        string num_autre = autre.tab_ag.getEntrees()[i].getNum();
+
+        if ((name_this!=name_autre) || (num_autre != num_this)){
+            return false;
+        }
+        
+
+
+    
+    }
+    return true;
+}
+
+ostream& operator<<(ostream& os, const Agenda& agenda) {
+    os << "Agenda:" << endl;
+    int nbEntries = agenda.tab_ag.getNb();  
+
+    for (int i = 0; i < nbEntries; ++i) {
+        string nom = agenda.tab_ag.getEntrees()[i].getNom();
+        string num = agenda.tab_ag.getEntrees()[i].getNum();
+        os << nom << ": " << num << endl;  
+    }
+    
+    return os;
+}
+
+
+bool Agenda::operator/(const string& name){
+    for (int i=0;i<this->tab_ag.getNb();i++){
+        if (this->tab_ag.getEntrees()[i].getNom()==name){
+            return true;
+
+        }
+    }
+    return false;
+
+}
