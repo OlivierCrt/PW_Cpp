@@ -133,3 +133,43 @@ bool Agenda::operator/(const string& name){
     return false;
 
 }
+
+Agenda& Agenda::operator=(const Agenda& autre){
+    if(this == &autre){
+        return *this;
+    }
+    this->tab_ag = autre.tab_ag;
+    return *this;
+
+}
+
+
+Entree& Agenda::operator[](const string& nom){
+    for (int i=0;i<this->tab_ag.getNb();i++){
+        if(this->tab_ag.getEntrees()[i].getNom()==nom){
+            return (this->tab_ag.getEntrees()[i]);
+        }
+    }
+    throw std::runtime_error("Entree non trouvée");
+    
+}
+
+
+Agenda& Agenda::operator-=(const string& nom){
+    for (int i=0;i<this->tab_ag.getNb();i++){
+        if(this->tab_ag.getEntrees()[i].getNom()==nom){
+            this->tab_ag.supprimer(nom);
+        }
+    }
+    return *this;
+    
+}
+
+void Agenda::operator()(const char& letter){
+    for (int i=0;i<this->tab_ag.getNb();i++){
+        if(this->tab_ag.getEntrees()[i].getNom()[0]==letter){
+            cout<<this->tab_ag.getEntrees()[i].getNom()<<endl;
+        }
+
+    }
+}
