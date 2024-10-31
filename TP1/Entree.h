@@ -13,8 +13,8 @@ class Entree{
         void printEntree();
         void setNom(string nom);
         void setNum(string num);
-        string getNom();
-        string getNum();
+        string getNom() const;
+        string getNum() const;
          
 
 };

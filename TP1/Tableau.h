@@ -14,15 +14,19 @@ private:
 public:
     Tableau();
     Tableau(int taille_p);
+    Tableau(const Tableau& autre);
     ~Tableau();
     void printTab();
     bool ajouter(std::string nom, std::string numero);
     bool supprimer(std::string nom, std::string numero);
     bool supprimer(std::string nom);
+    Tableau clone();
     int getNb()const;
     int getTaille()const;
     void setNb(int nb);
     Entree* getEntrees()const;
+
+    Tableau& operator=(const Tableau& autre);
 
 };
 

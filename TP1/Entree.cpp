@@ -23,9 +23,9 @@ void Entree::setNom(string nom_p){
 void Entree::setNum(string num_p){
     this->numero = num_p;
 }
-string Entree::getNom(){
+string Entree::getNom() const{
     return (this->nom);
 }
-string Entree::getNum(){
+string Entree::getNum() const{
     return (this->numero);
 }

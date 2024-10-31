@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Agenda::Agenda() : tab_ag(5) { // Initialise le tableau avec une taille par défaut de 5
+Agenda::Agenda() : tab_ag(5) { 
 }
 
 Agenda::Agenda(Tableau tab) : tab_ag(tab) {
@@ -134,14 +134,14 @@ bool Agenda::operator/(const string& name){
 
 }
 
-Agenda& Agenda::operator=(const Agenda& autre){
-    if(this == &autre){
-        return *this;
+Agenda& Agenda::operator=(const Agenda& autre) {
+    if (this != &autre) {
+        this->tab_ag = autre.tab_ag;  
     }
-    this->tab_ag = autre.tab_ag;
     return *this;
-
 }
+
+
 
 
 Entree& Agenda::operator[](const string& nom){
