@@ -52,7 +52,6 @@
 ### Operators
 
 - `<<`: Displays an agenda.
-- `+=`: Adds a name and phone number.
 - `=`: Assigns one agenda to another.
 - `+`: Returns a new agenda formed by concatenating two agendas.
 - `+=`: Concatenates one agenda to another.
