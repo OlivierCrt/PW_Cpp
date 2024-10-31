@@ -19,6 +19,8 @@ class Agenda{
         Agenda& operator+=(const Agenda& autre);
 
 
+
+
         bool operator==(const Agenda& autre);   
         friend ostream& operator<<(ostream& os, const Agenda& agenda);
         bool operator/(const string& nom);
