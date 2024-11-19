@@ -1,5 +1,3 @@
-#ifndef LIVRE_H
-#define LIVRE_H
 
 #include "Document.h"
 
@@ -14,7 +12,6 @@ public:
 
     // Constructeur de copie
     Livre(Livre& other);
-
     ~Livre();
     void  afficher() const;
     Livre clone();
@@ -22,4 +19,3 @@ public:
 
 };
 
-#endif

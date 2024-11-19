@@ -2,7 +2,6 @@
 
 
 
-//mes fichier de test sont en partie fait avec l'aide de l'IA ça me permets de gagner un peu de temps et de faire tous les uses cases
 int main() {
     // Test du constructeur par défaut
     Document doc1;

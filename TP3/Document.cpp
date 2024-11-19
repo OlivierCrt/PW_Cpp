@@ -9,7 +9,6 @@ Document::Document(string& titre, string* res, string auteur)
     : title(titre), resume(res ? new string(*res) : new string("défaut")), autor(auteur) {
 }
 
-// Constructeur de copie
 Document::Document(Document& other)
     : title(other.title), resume(new string(*(other.resume))), autor(other.autor) {
     
@@ -48,6 +47,6 @@ void Document::setResume(string& newResume) {
     *resume = newResume;
 }
 
-void Document::setAuteur(string& newAuteur) {
+void Document::setAuteur(string newAuteur) {
     autor = newAuteur;
 }

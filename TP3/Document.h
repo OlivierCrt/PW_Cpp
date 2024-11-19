@@ -10,13 +10,9 @@ class Document{
     public: 
     Document();
     Document(string& titre, string* resume,string auteur);
-
     Document(Document& other);
-
     ~Document();
-
     void afficher() const;
-
     Document clone() ;
 
     // Getters
@@ -26,6 +22,6 @@ class Document{
 
     // Setters 
     void setResume(string& newResume);
-    void setAuteur(string& newAuteur);
+    void setAuteur(string newAuteur);
 
 };
