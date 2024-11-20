@@ -1,4 +1,5 @@
 #include "Document.h"
+#include <iostream>
 using namespace std;
 
 Document::Document()

@@ -62,3 +62,4 @@ Article& Article::operator=(const Article& other) {
     }
     return *this;
 }
+

@@ -34,9 +34,7 @@ public:
     void setRevue(string& nouvelleRevue);
     void setEditeur(string nouvelEditeur);
     void setNumeroEdition(int nouveauNumero);
-
-    Article& operator=(const Article& other); // Opérateur d'affectation
-
+    Article& operator=(const Article& other);
 };
 
 #endif

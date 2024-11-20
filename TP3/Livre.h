@@ -16,7 +16,6 @@ public:
     ~Livre();
     void  afficher() const;
     Livre clone();
-
     Livre& operator=(const Livre& other); // Opérateur d'affectation
 
 
