@@ -23,6 +23,16 @@ Livre Livre::clone(){
     return  Livre(*this);
 }
 
+Livre& Livre::operator=(const Livre& other) {
+    if (this != &other) {
+        Document::operator=(other); // Appeler l'opérateur d'affectation de la classe de base
+        editeur = other.editeur;
+        anneeParution = other.anneeParution;
+    }
+    return *this;
+}
+
+
 
 
 

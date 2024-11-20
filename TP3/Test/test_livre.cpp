@@ -3,11 +3,11 @@
 #include <string>
 using namespace std;
 
-int main() {
-    // Créer un objet Livre
-    string titre = "Les Misérables";
-    string resume = "Un roman sur la misère et la rédemption.";
-    string auteur = "Victor Hugo";
+int main()
+
+    string titre = "coco";
+    string resume = "Un roman sur la misère";
+    string auteur = "didier";
     string editeur = "Gallimard";
     int annee = 1862;
 

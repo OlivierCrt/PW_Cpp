@@ -1,3 +1,6 @@
+#ifndef DOCUMENT_H
+#define DOCUMENT_H
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -15,6 +18,8 @@ class Document{
     void afficher() const;
     Document clone() ;
 
+    Document& operator=(const Document& other); // Opérateur d'affectation
+
     // Getters
     string& getTitre() const;
     string& getResume() const;
@@ -25,3 +30,5 @@ class Document{
     void setAuteur(string newAuteur);
 
 };
+
+#endif

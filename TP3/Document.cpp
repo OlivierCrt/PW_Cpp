@@ -50,3 +50,17 @@ void Document::setResume(string& newResume) {
 void Document::setAuteur(string newAuteur) {
     autor = newAuteur;
 }
+
+
+Document& Document::operator=(const Document& other) {
+    if (this != &other) { 
+        
+        delete resume; 
+
+
+
+        resume = new string(*other.resume);
+        autor = other.autor;
+    }
+    return *this;
+}
