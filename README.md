@@ -29,6 +29,8 @@
 - **/:** Checks if a name exists in the agenda.
 - **():** Displays names starting with a given letter.
 
+[Subject PDF](https://github.com/OlivierCrt/PW_Cpp/tree/main/TP1_TP2/Pdf)
+
 ---
 
 # TP3: Inheritance and Polymorphism in a Library System
@@ -56,6 +58,8 @@
 - **Search Document:** Finds a document by title.
 - **Display:** Outputs all documents in the library.
 
+[Subject PDF](https://github.com/OlivierCrt/PW_Cpp/tree/main/TP3/pdf)
+
 ---
 
 # TP4: Virtuality and Polymorphism
@@ -72,3 +76,5 @@
 
 ### Derived Classes (`Livre` and `Article`)
 - **calculerCoût:** Implements specific cost calculations.
+
+[Subject PDF](https://github.com/OlivierCrt/PW_Cpp/tree/main/TP4/pdf)
